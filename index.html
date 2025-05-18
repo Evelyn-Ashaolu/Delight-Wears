@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delight Wears</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+/>
+
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header>
+    <header>
+      <div class="logo">
+        <img src="images/DelightLogo.png" alt="Delight Wears Logo" />
+      </div>
+    </header>
+    
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Cart</a>
+    <a href="#">Login</a>
+    <a href="#contact-section">Contact</a>
+
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Delight Wears</h2>
+    <p>Your trusted marketplace for premium fashion</p>
+    <button id="shopBtn">Shop Now</button>
+  </section>
+
+  <section class="about">
+    <h3>About Delight Wears</h3>
+    <p>We are committed to providing stylish and safe baby items that bring joy to families. Our mission is to blend quality with affordability for every parent.</p>
+  </section>
+
+  <section class="slider">
+    <div class="slides">
+      <img src="images/Slide1.jpg" class="slide" alt="Slide 1">
+      <img src="images/Slide2.jpg" class="slide" alt="Slide 2">
+      <img src="images/Slide3.jpg" class="slide" alt="Slide 3">
+      <img src="images/Slide4.jpg" class="slide" alt="Slide4">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h3>What Our Customers Say</h3>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>"Great quality and fast delivery!"</p>
+        <span>- Becca O.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Absolutely love the baby outfits. Will shop again!"</p>
+        <span>- Samuel K.</span>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Categories -->
+  <section class="products">
+    <h3>Featured Products</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="images/baby-shirt.jpg.jpg" alt="Baby Shirt" />
+        <h4>Baby Shirt</h4>
+        <p>₦2,000</p>
+        <button class="add-to-cart" data-name="Baby Shirt" data-price="2000">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/Feeding-Bottle.jpg" alt="Feeding Bottle">
+        <h4>Feeding Bottle</h4>
+        <p>₦1,500</p>
+        <button class="add-to-cart" data-name="Feeding Bottle" data-price="1500">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/toy.jpg" alt="Baby Toy" />
+        <h4>Baby Toy</h4>
+        <p>₦3,000</p>
+        <button class="add-to-cart" data-name="Baby Toy" data-price="3000">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Us Section -->
+<section class="contact">
+  <h3>Contact Us</h3>
+  <p>Have questions or need help? Reach out!</p>
+  <a href="evelynashaolu@gmail.com">
+    <button>Contact Us</button>
+  </a>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.instagram.com/evaashley_/" target="_blank" style="margin: 0 10px; color: #E4405F;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/EvaAshaolu/" target="_blank" style="margin: 0 10px; color: #3b5998;">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <p>&copy; 2025 Delight Wears. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    let slideIndex = 1;
+    showSlide(slideIndex);
+  
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    }
+  
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+  
+    function showSlide(n) {
+      const slides = document.getElementsByClassName("slide");
+      const dots = document.getElementsByClassName("dot");
+  
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+  
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+  
+      slides[slideIndex - 1].classList.add("active");
+      dots[slideIndex - 1].classList.add("active");
+    }
+  </script>
+  
+</body>
+</html>
